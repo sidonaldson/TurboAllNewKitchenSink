@@ -19,22 +19,19 @@ This Turborepo includes the following packages and apps:
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-### Utilities
+### Building packages/ui
 
-This Turborepo has some additional tools already setup for you:
+This example is setup to build `packages/ui` and output the transpiled source and compiled styles to `dist/`. This was chosen to make sharing one `tailwind.config.js` as easy as possible, and to ensure only the CSS that is used by the current application and its dependencies is generated.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update your `tailwind.config.js` to be aware of your package locations, so it can find all usages of the `tailwindcss` class names.
 
-## Using this example
+For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js):
 
-Run the following command:
-
-```sh
-npx degit vercel/turbo/examples/kitchen-sink kitchen-sink
-cd kitchen-sink
-pnpm install
-git init . && git add . && git commit -m "Init"
+```js
+  content: [
+    // app content
+    `src/**/*.{js,ts,jsx,tsx}`,
+    // include packages if not transpiling
+    "../../packages/**/*.{js,ts,jsx,tsx}",
+  ],
 ```

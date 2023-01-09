@@ -1,8 +1,12 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
+  extends: ['next', 'turbo', 'prettier'],
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
+  },
+  rules: {
+    '@next/next/no-html-link-for-pages': 'off',
+    'react/jsx-key': 'off',
   },
 };
