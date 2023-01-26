@@ -35,3 +35,10 @@ For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js
     "../../packages/**/*.{js,ts,jsx,tsx}",
   ],
 ```
+
+
+## Troubleshooting
+
+Build fails, missing style.css file OR permission not allowed.
+Cause - folders are protected
+Solution: `sudo chmod -R 777 /path/to/root/project/folder`
