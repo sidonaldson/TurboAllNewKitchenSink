@@ -1,3 +1,12 @@
+# TODO
+
+[x] - Add TODO list to Readme  
+[ ] - Add AirBnB eslint config  
+[ ] - Add Axe a11y testing  
+[ ] - Tailwind should build dynamic classes in [Storybook (docs)](http://localhost:6006/?path=/story/components-gradienttext--default-story)  
+[ ] - Next thing  
+[ ] - Next thing  
+
 # Turborepo kitchen sink starter
 
 This is an official starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.
@@ -35,7 +44,6 @@ For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js
     "../../packages/**/*.{js,ts,jsx,tsx}",
   ],
 ```
-
 
 ## Troubleshooting
 
