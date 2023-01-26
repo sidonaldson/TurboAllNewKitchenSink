@@ -2,7 +2,11 @@ const path = require('path');
 
 module.exports = {
   stories: ['../stories/**/*.stories.*', '../../../packages/**/*.stories.*'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+  ],
   framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-vite',
