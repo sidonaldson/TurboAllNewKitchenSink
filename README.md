@@ -1,11 +1,11 @@
 # TODO
 
-[x] - Add TODO list to Readme  
-[ ] - Add AirBnB eslint config  
-[ ] - Add Axe a11y testing  
-[ ] - Tailwind should build dynamic classes in [Storybook (docs)](http://localhost:6006/?path=/story/components-gradienttext--default-story)  
-[ ] - Next thing  
-[ ] - Next thing  
+- [x] - Add TODO list to Readme  
+- [ ] - Add AirBnB eslint config  
+- [ ] - Add Axe a11y testing  
+- [ ] - Tailwind should build dynamic classes in [Storybook (docs)](http://localhost:6006/?path=/story/components-gradienttext--default-story)  
+- [ ] - Next thing  
+- [ ] - Next thing  
 
 # Turborepo kitchen sink starter
 
