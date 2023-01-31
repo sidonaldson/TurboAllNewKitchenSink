@@ -19,7 +19,9 @@ build
 *.pem
 dist
 dist-ssr
+storybook-static/
 .cache
+
 
 # debug
 npm-debug.log*
