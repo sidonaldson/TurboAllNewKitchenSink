@@ -1,10 +1,11 @@
 module.exports = {
   extends: [
-    "next",
+    "next/core-web-vitals",
     "eslint:recommended",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
+    "plugin:@next/next/recommended",
     "turbo",
     "prettier",
   ],

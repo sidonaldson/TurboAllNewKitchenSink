@@ -1,11 +1,13 @@
 # TODO
 
 - [x] - Add TODO list to Readme
-- [ ] - Add AirBnB eslint config
+- [x] - Add AirBnB eslint config
 - [ ] - Add Axe a11y testing
 - [ ] - Tailwind should build dynamic classes in [Storybook (docs)](http://localhost:6006/?path=/story/components-gradienttext--default-story)
 - [ ] - Check JS files can be included in projects (for when we mirgate over)
-- [ ] - Next thing
+- [ ] - Move tests to be with the files they test
+- [ ] - Add React Testing Library
+- [ ] - Add pre-commit and pre-push hooks
 
 # Turborepo kitchen sink starter
 
