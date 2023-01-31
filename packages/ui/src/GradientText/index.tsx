@@ -1,8 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 
 export const GradientText = ({
-  classNames = '',
-  text = '',
+  classNames = "",
+  text = "",
 }: {
   classNames?: string;
   text?: string;
