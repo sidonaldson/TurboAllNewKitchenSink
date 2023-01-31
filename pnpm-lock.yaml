@@ -304,8 +304,8 @@ importers:
   packages/ui:
     specifiers:
       '@types/jest': ^26.0.22
-      '@types/react': ^17.0.13
-      '@types/react-dom': ^17.0.8
+      '@types/react': ^17.0.52
+      '@types/react-dom': ^17.0.18
       concurrently: ^7.2.2
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
@@ -319,14 +319,14 @@ importers:
       tsup: ^6.2.3
       typescript: ^4.8.3
     dependencies:
-      '@types/react': 17.0.52
-      '@types/react-dom': 17.0.18
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tailwind-config: link:../tailwind-config
       tailwindcss: 3.2.4_postcss@8.4.21
     devDependencies:
       '@types/jest': 26.0.24
+      '@types/react': 17.0.52
+      '@types/react-dom': 17.0.18
       concurrently: 7.6.0
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
@@ -4333,6 +4333,7 @@ packages:
     resolution: {integrity: sha512-rLVtIfbwyur2iFKykP2w0pl/1unw26b5td16d5xMgp7/yjTHomkyxPYChFoCr/FtEX1lN9wY6lFj1qvKdS5kDw==}
     dependencies:
       '@types/react': 17.0.52
+    dev: true
 
   /@types/react-dom/18.0.10:
     resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
@@ -4346,6 +4347,7 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
+    dev: true
 
   /@types/react/18.0.26:
     resolution: {integrity: sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==}
