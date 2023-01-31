@@ -15,6 +15,7 @@ module.exports = {
     },
   },
   rules: {
+    // OFF
     "@next/next/no-html-link-for-pages": "off",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
@@ -22,5 +23,8 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
+    // ON
+    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
   },
 };
