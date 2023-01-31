@@ -7,6 +7,7 @@
     "format": "prettier --check \"**/*.{js,ts,jsx,tsx,json,css,yml,md}\"",
     "format:fix": "prettier --write \"**/*.{js,ts,jsx,tsx,json,css,yml,md}\"",
     "lint": "turbo run lint",
+    "lint:errors": "turbo run lint:errors",
     "lint:fix": "turbo run lint:fix",
     "test": "turbo run test"
   },
