@@ -15,6 +15,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  rules: {
+    'import/prefer-default-export': 'off',
+  },
   overrides: [
     {
       files: ['**/__tests__/**/*'],

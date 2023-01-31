@@ -250,9 +250,21 @@ importers:
 
   packages/eslint-config-custom-server:
     specifiers:
+      '@typescript-eslint/eslint-plugin': ^5.49.0
+      '@typescript-eslint/parser': ^5.49.0
+      eslint-config-airbnb: ^19.0.4
+      eslint-config-airbnb-typescript: ^17.0.0
+      eslint-config-prettier: ^8.3.0
       eslint-config-turbo: latest
+      eslint-plugin-import: ^2.27.5
     dependencies:
+      '@typescript-eslint/eslint-plugin': 5.49.0_7fyu7tzssq62w2gougx5irpqtq
+      '@typescript-eslint/parser': 5.49.0_iukboom6ndih5an6iafl45j2fe
+      eslint-config-airbnb: 19.0.4_zbqo653t3xe74pytzrirb36pam
+      eslint-config-airbnb-typescript: 17.0.0_xlprsh3lq4gpljizjdbssre2tu
+      eslint-config-prettier: 8.6.0_eslint@8.31.0
       eslint-config-turbo: 0.0.7_eslint@8.31.0
+      eslint-plugin-import: 2.27.5_wawrprsyaodjx2nf77abpxkp2i
 
   packages/jest-presets:
     specifiers:
@@ -7546,7 +7558,7 @@ packages:
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.49.0_iukboom6ndih5an6iafl45j2fe
       eslint: 8.31.0
-      eslint-import-resolver-node: 0.3.6
+      eslint-import-resolver-node: 0.3.7
       eslint-import-resolver-typescript: 3.5.2_vz4tyq5r7fh66imfi352lmrvhq
       eslint-plugin-import: 2.27.5_2ormp5iwbkm7gcyxso5inw3gee
       eslint-plugin-jsx-a11y: 6.7.1_eslint@8.31.0
@@ -7574,15 +7586,6 @@ packages:
     dependencies:
       eslint: 8.31.0
       eslint-plugin-turbo: 0.0.7_eslint@8.31.0
-    dev: false
-
-  /eslint-import-resolver-node/0.3.6:
-    resolution: {integrity: sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==}
-    dependencies:
-      debug: 3.2.7
-      resolve: 1.22.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /eslint-import-resolver-node/0.3.7:
