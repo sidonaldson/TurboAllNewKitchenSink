@@ -20,6 +20,10 @@
       "dependsOn": ["^build"],
       "outputs": []
     },
+    "lint:errors": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
     "lint:fix": {
       "dependsOn": ["^build"],
       "outputs": []

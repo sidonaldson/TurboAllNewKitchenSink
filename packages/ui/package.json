@@ -16,6 +16,7 @@
     "clean": "rm -rf dist",
     "dev": "concurrently \"tsup src/index.tsx --format esm,cjs --dts --external react --watch\" \"tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch\"",
     "lint": "tsc --noEmit && eslint \"src/**/*.{js,ts,jsx,tsx}\"",
+    "lint:errors": "npm run lint -- --quiet",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
