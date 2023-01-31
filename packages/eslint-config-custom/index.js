@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'next',
+    'eslint:recommended',
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
