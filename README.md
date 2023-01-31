@@ -1,11 +1,11 @@
 # TODO
 
-- [x] - Add TODO list to Readme  
-- [ ] - Add AirBnB eslint config  
-- [ ] - Add Axe a11y testing  
-- [ ] - Tailwind should build dynamic classes in [Storybook (docs)](http://localhost:6006/?path=/story/components-gradienttext--default-story)  
-- [ ] - Check JS files can be included in projects (for when we mirgate over)  
-- [ ] - Next thing  
+- [x] - Add TODO list to Readme
+- [ ] - Add AirBnB eslint config
+- [ ] - Add Axe a11y testing
+- [ ] - Tailwind should build dynamic classes in [Storybook (docs)](http://localhost:6006/?path=/story/components-gradienttext--default-story)
+- [ ] - Check JS files can be included in projects (for when we mirgate over)
+- [ ] - Next thing
 
 # Turborepo kitchen sink starter
 

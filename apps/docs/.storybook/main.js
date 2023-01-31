@@ -1,15 +1,15 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  stories: ['../stories/**/*.stories.*', '../../../packages/**/*.stories.*'],
+  stories: ["../stories/**/*.stories.*", "../../../packages/**/*.stories.*"],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
   ],
-  framework: '@storybook/react',
+  framework: "@storybook/react",
   core: {
-    builder: '@storybook/builder-vite',
+    builder: "@storybook/builder-vite",
   },
   async viteFinal(config, { configType }) {
     // customize the Vite config here
@@ -18,8 +18,8 @@ module.exports = {
       resolve: {
         alias: [
           {
-            find: '@ui',
-            replacement: path.resolve(__dirname, '../../../packages/ui/'),
+            find: "@ui",
+            replacement: path.resolve(__dirname, "../../../packages/ui/"),
           },
         ],
       },
