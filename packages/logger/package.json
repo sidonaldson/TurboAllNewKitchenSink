@@ -13,6 +13,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "dev": "tsc -w",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
   "jest": {
