@@ -9,8 +9,7 @@ export const CounterButton = () => {
         borderRadius: `8px`,
         padding: "1.5rem",
         fontWeight: 500,
-      }}
-    >
+      }}>
       <p style={{ margin: "0 0 1.5rem 0" }}>
         This component is from{" "}
         <code
@@ -18,8 +17,7 @@ export const CounterButton = () => {
             padding: "0.2rem 0.3rem",
             background: `rgba(0,0,0,0.1)`,
             borderRadius: "0.25rem",
-          }}
-        >
+          }}>
           ui
         </code>
       </p>
@@ -35,8 +33,7 @@ export const CounterButton = () => {
             cursor: "pointer",
           }}
           type="button"
-          onClick={() => setCount((c) => c + 1)}
-        >
+          onClick={() => setCount((c) => c + 1)}>
           Count: {count}
         </button>
       </div>

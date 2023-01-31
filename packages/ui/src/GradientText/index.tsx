@@ -8,8 +8,7 @@ export const GradientText = ({
   text?: string;
 }) => (
   <span
-    className={`inline-block bg-gradient-to-r bg-clip-text text-transparent ${classNames}`}
-  >
+    className={`inline-block bg-gradient-to-r bg-clip-text text-transparent ${classNames}`}>
     {text}
   </span>
 );
