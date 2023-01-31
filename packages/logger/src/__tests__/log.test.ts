@@ -1,10 +1,11 @@
-import { log } from "..";
+import { log } from '..';
 
-jest.spyOn(global.console, "log");
+jest.spyOn(global.console, 'log');
 
-describe("logger", () => {
-  it("prints a message", () => {
-    log("hello");
+describe('logger', () => {
+  it('prints a message', () => {
+    log('hello');
+    // eslint-disable-next-line no-console
     expect(console.log).toBeCalled();
   });
 });

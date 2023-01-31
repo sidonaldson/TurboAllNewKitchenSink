@@ -1,3 +1,4 @@
 export const log = (str: any) => {
-  console.log(`logger: ${  str}`);
+  // eslint-disable-next-line no-console
+  console.log(`logger: ${str}`);
 };
