@@ -1,4 +1,4 @@
 {
-  "eslint.workingDirectories": ["./packages/*/", "./apps/*/"], // tell VSCode where our packages are
+  "eslint.workingDirectories": ["./packages/*/", "./apps/*/"], // tell ESLint extension where our packages are
   "typescript.tsdk": "node_modules/typescript/lib" // use project TS server and not VSCode
 }
