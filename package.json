@@ -12,11 +12,11 @@
     "test": "turbo run test"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.35.0",
     "eslint-config-custom": "workspace:*",
-    "prettier": "^2.8.3",
-    "prettier-plugin-tailwindcss": "^0.1.13",
-    "turbo": "latest"
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3",
+    "turbo": "^1.8.3"
   },
-  "packageManager": "pnpm@7.26.2"
+  "packageManager": "pnpm@7.28.0"
 }
