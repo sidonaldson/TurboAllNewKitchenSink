@@ -1,11 +1,11 @@
 {
-  "name": "tailwind-docs",
-  "version": "1.0.0",
+  "name": "dashboard",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next",
-    "dev": "next dev -p 3002",
+    "dev": "next dev -p 3000",
     "lint": "next lint",
     "lint:errors": "next lint --quiet",
     "lint:fix": "next lint --fix",

@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="container">
       <h1 className="title">
-        Admin <br />
-        <span>Kitchen Sink</span>
+        Welcome to <br />
+        <span>presenter</span>
       </h1>
       <CounterButton />
       <p className="description">

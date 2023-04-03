@@ -5,16 +5,16 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>Docs - Turborepo Example</title>
+        <title>Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="mx-auto w-auto px-4 pt-16 pb-8 sm:pt-24 lg:px-8">
         <h1 className="mx-auto max-w-5xl text-center text-6xl font-extrabold leading-[1.1] tracking-tighter text-white sm:text-7xl lg:text-8xl xl:text-8xl">
-          Docs <br className="hidden lg:block" />
+          Dashboard <br className="hidden lg:block" />
           <GradientText
             text=" Turborepo Example"
-            classNames="from-red-500 to-yellow-500"
+            classNames="from-brandred to-brandblue"
           />
         </h1>
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">

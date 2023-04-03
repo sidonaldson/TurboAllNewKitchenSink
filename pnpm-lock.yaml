@@ -16,33 +16,6 @@ importers:
       prettier-plugin-tailwindcss: 0.2.3_prettier@2.8.4
       turbo: 1.8.3
 
-  apps/admin:
-    specifiers:
-      '@types/react': ^18.0.28
-      '@types/react-dom': ^18.0.11
-      '@vitejs/plugin-react': ^3.1.0
-      eslint: ^8.35.0
-      eslint-config-custom: workspace:*
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      tsconfig: workspace:*
-      typescript: ^4.9.5
-      ui: workspace:*
-      vite: ^4.1.4
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
-    devDependencies:
-      '@types/react': 18.0.28
-      '@types/react-dom': 18.0.11
-      '@vitejs/plugin-react': 3.1.0_vite@4.1.4
-      eslint: 8.35.0
-      eslint-config-custom: link:../../packages/eslint-config-custom
-      tsconfig: link:../../packages/tsconfig
-      typescript: 4.9.5
-      vite: 4.1.4
-
   apps/api:
     specifiers:
       '@types/body-parser': ^1.19.2
@@ -88,7 +61,67 @@ importers:
       tsup: 6.6.3_typescript@4.9.5
       typescript: 4.9.5
 
-  apps/docs:
+  apps/dashboard:
+    specifiers:
+      '@types/node': ^18.14.2
+      '@types/react': ^18.0.28
+      '@types/react-dom': ^18.0.11
+      autoprefixer: ^10.4.13
+      eslint-config-custom: workspace:*
+      next: ^13.2.1
+      postcss: ^8.4.21
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      tailwind-config: workspace:*
+      tailwindcss: ^3.2.7
+      tsconfig: workspace:*
+      typescript: ^4.9.5
+      ui: workspace:*
+    dependencies:
+      next: 13.2.1_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      ui: link:../../packages/ui
+    devDependencies:
+      '@types/node': 18.14.2
+      '@types/react': 18.0.28
+      '@types/react-dom': 18.0.11
+      autoprefixer: 10.4.13_postcss@8.4.21
+      eslint-config-custom: link:../../packages/eslint-config-custom
+      postcss: 8.4.21
+      tailwind-config: link:../../packages/tailwind-config
+      tailwindcss: 3.2.7_postcss@8.4.21
+      tsconfig: link:../../packages/tsconfig
+      typescript: 4.9.5
+
+  apps/presenter:
+    specifiers:
+      '@types/react': ^18.0.28
+      '@types/react-dom': ^18.0.11
+      '@vitejs/plugin-react': ^3.1.0
+      eslint: ^8.35.0
+      eslint-config-custom: workspace:*
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      tsconfig: workspace:*
+      typescript: ^4.9.5
+      ui: workspace:*
+      vite: ^4.1.4
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      ui: link:../../packages/ui
+    devDependencies:
+      '@types/react': 18.0.28
+      '@types/react-dom': 18.0.11
+      '@vitejs/plugin-react': 3.1.0_vite@4.1.4
+      eslint: 8.35.0
+      eslint-config-custom: link:../../packages/eslint-config-custom
+      tsconfig: link:../../packages/tsconfig
+      typescript: 4.9.5
+      vite: 4.1.4
+
+  apps/storybook:
     specifiers:
       '@storybook/addon-actions': ^6.5.14
       '@storybook/addon-docs': ^6.5.14
@@ -127,40 +160,7 @@ importers:
       typescript: 4.9.5
       vite: 4.1.4
 
-  apps/tailwind-docs:
-    specifiers:
-      '@types/node': ^18.14.2
-      '@types/react': ^18.0.28
-      '@types/react-dom': ^18.0.11
-      autoprefixer: ^10.4.13
-      eslint-config-custom: workspace:*
-      next: ^13.2.1
-      postcss: ^8.4.21
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      tailwind-config: workspace:*
-      tailwindcss: ^3.2.7
-      tsconfig: workspace:*
-      typescript: ^4.9.5
-      ui: workspace:*
-    dependencies:
-      next: 13.2.1_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
-    devDependencies:
-      '@types/node': 18.14.2
-      '@types/react': 18.0.28
-      '@types/react-dom': 18.0.11
-      autoprefixer: 10.4.13_postcss@8.4.21
-      eslint-config-custom: link:../../packages/eslint-config-custom
-      postcss: 8.4.21
-      tailwind-config: link:../../packages/tailwind-config
-      tailwindcss: 3.2.7_postcss@8.4.21
-      tsconfig: link:../../packages/tsconfig
-      typescript: 4.9.5
-
-  apps/tailwind-web:
+  apps/viewer:
     specifiers:
       '@types/node': ^18.14.2
       '@types/react': ^18.0.28
@@ -800,7 +800,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.12.9
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-object-rest-spread': 7.8.3_@babel+core@7.12.9
       '@babel/plugin-transform-parameters': 7.20.7_@babel+core@7.12.9
     dev: false
@@ -6097,7 +6097,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -7848,7 +7848,7 @@ packages:
       eslint-scope: 7.1.1
       eslint-utils: 3.0.0_eslint@8.4.1
       eslint-visitor-keys: 3.3.0
-      espree: 9.2.0
+      espree: 9.4.1
       esquery: 1.4.2
       esutils: 2.0.3
       fast-deep-equal: 3.1.3
@@ -11836,17 +11836,6 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
-    dev: false
-
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
     dev: false
 
   /promise.allsettled/1.0.6:
