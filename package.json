@@ -10,7 +10,7 @@
     "lint:errors": "turbo run lint:errors",
     "lint:fix": "turbo run lint:fix",
     "test": "turbo run test",
-    "test:cypress": "npm run test:cypress -w cypress"
+    "test:cypress": "pnpm run --filter ./cypress test:cypress"
   },
   "devDependencies": {
     "eslint": "^8.35.0",
