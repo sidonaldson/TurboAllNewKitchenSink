@@ -9,14 +9,16 @@
     "lint": "turbo run lint",
     "lint:errors": "turbo run lint:errors",
     "lint:fix": "turbo run lint:fix",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "test:cypress": "npm run test:cypress -w cypress"
   },
   "devDependencies": {
     "eslint": "^8.35.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
-    "turbo": "^1.8.3"
+    "turbo": "^1.8.3",
+    "@testing-library/cypress": "^8.0.3"
   },
   "packageManager": "pnpm@7.28.0"
 }
