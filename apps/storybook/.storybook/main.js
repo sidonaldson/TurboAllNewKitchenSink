@@ -1,16 +1,17 @@
 const path = require("path");
-
 module.exports = {
   stories: ["../stories/**/*.stories.*", "../../../packages/**/*.stories.*"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-mdx-gfm",
   ],
-  framework: "@storybook/react",
+  framework: "@storybook/react-vite",
   core: {
     builder: "@storybook/builder-vite",
   },
+
   async viteFinal(config, { configType }) {
     // customize the Vite config here
     return {
@@ -24,5 +25,8 @@ module.exports = {
         ],
       },
     };
+  },
+  docs: {
+    autodocs: true,
   },
 };
