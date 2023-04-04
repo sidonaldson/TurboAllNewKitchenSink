@@ -1,0 +1,14 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "cypress": "cypress open",
+    "cypress:ci": "cypress run headless"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.9.0",
+    "@testing-library/cypress": "^8.0.3"
+  }
+}
