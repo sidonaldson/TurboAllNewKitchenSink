@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Button, GradientText } from "ui";
+import { Button, GradientText, TestJS } from "ui";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button />
         </div>
+        <TestJS className="m-4 text-center text-white" />
       </main>
     </div>
   );

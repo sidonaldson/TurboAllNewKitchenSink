@@ -1,0 +1,22 @@
+import { TestJS } from "@ui";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<Meta title="Components/JavaScript" component={TestJS} />
+
+# TestJS
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
+
+## Props
+
+<ArgsTable of={TestJS} />
+
+## Examples
+
+<Canvas>
+  <Story name="Default">
+    <div style={{ backgroundColor: "black", padding: "1rem" }}>
+      <TestJS className="text-center text-white" />
+    </div>
+  </Story>
+</Canvas>
