@@ -5,8 +5,8 @@ import "ui/styles.css";
 
 function App() {
   return (
-    <div className="container">
-      <p className="text-red-500">Hello Tailwind — this text should be red</p>
+    <main className="container">
+      <p className="text-red-700">Hello Tailwind — this text should be red</p>
       <h1 className="title">
         Welcome to <br />
         <span>presenter</span>
@@ -17,7 +17,7 @@ function App() {
         <NewTabLink href="https://turbo.build/repo">Turborepo</NewTabLink> +{" "}
         <NewTabLink href="https://vitejs.dev/">Vite</NewTabLink>
       </p>
-    </div>
+    </main>
   );
 }
 

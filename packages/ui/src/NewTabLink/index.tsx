@@ -8,7 +8,12 @@ export const NewTabLink = ({
   children: React.ReactNode;
   href: string;
 }) => (
-  <a target="_blank" rel="noreferrer" href={href} {...other}>
+  <a
+    target="_blank"
+    rel="noreferrer"
+    href={href}
+    className="text-red-700"
+    {...other}>
     {children}
   </a>
 );

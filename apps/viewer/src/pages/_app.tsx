@@ -1,8 +1,11 @@
+import React from "react";
+import ReactDOM from "react-dom";
 import "../styles/globals.css";
-// include styles from the ui package
 import "ui/styles.css";
-
+import { reportAccessibility } from "ui";
 import type { AppProps } from "next/app";
+
+reportAccessibility(React, ReactDOM);
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;

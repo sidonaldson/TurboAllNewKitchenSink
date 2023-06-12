@@ -26,15 +26,6 @@
 }
 
 .description {
-  color: #9ca3af;
+  color: #000;
   font-weight: 500;
-}
-
-.description a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-.description a:hover {
-  text-decoration: underline;
 }
