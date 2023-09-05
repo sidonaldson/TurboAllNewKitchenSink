@@ -1,3 +1,5 @@
+// @ts-nocheck
+/* eslint-disable react/prop-types */
 import React from "react";
 import styles from "./Image.module.css";
 
@@ -14,8 +16,7 @@ export const Image = ({
     className={`${styles.picture} ${className}`}
     style={style}
     draggable="false"
-    data-cy="image-container"
-  >
+    data-cy="image-container">
     {sourceWidescreen && (
       <source media="(min-aspect-ratio: 16/9)" srcSet={sourceWidescreen} />
     )}
