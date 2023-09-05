@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+// @ts-nocheck
 import React from "react";
 
 import {
@@ -113,8 +115,7 @@ export const IconCone = ({ rotation }) => (
     width="24"
     height="24"
     style={{ transform: `rotate(${rotation})` }}
-    viewBox="0 0 269.5 339.1"
-  >
+    viewBox="0 0 269.5 339.1">
     <g>
       <g>
         <path
@@ -176,8 +177,7 @@ export const IconLargeCircle = () => (
     height="44"
     viewBox="0 0 44 44"
     preserveAspectRatio="xMidYMid meet"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+    xmlns="http://www.w3.org/2000/svg">
     <circle cx="22" cy="22" r="11" fill="currentColor" />
   </svg>
 );
@@ -188,8 +188,7 @@ export const IconSmallCircle = () => (
     height="44"
     viewBox="0 0 44 44"
     preserveAspectRatio="xMidYMid meet"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+    xmlns="http://www.w3.org/2000/svg">
     <circle cx="22" cy="22" r="8" fill="currentColor" />
   </svg>
 );
@@ -200,8 +199,7 @@ export const IconSquare = () => (
     height="44"
     viewBox="0 0 44 44"
     preserveAspectRatio="xMidYMid meet"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+    xmlns="http://www.w3.org/2000/svg">
     <rect x="15" y="15" width="14" height="14" fill="currentColor" />
   </svg>
 );
@@ -212,8 +210,7 @@ export const IconPinDrop = () => (
     viewBox="0 0 24 24"
     preserveAspectRatio="xMidYMid meet"
     width="34px"
-    fill="currentColor"
-  >
+    fill="currentColor">
     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
   </svg>
 );
@@ -224,8 +221,7 @@ export const IconDiamond = () => (
     height="44"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 44 44"
-    preserveAspectRatio="xMidYMid meet"
-  >
+    preserveAspectRatio="xMidYMid meet">
     <polygon points="22,11 33,22 22,33 11,22" fill="currentColor" />
   </svg>
 );
@@ -251,8 +247,7 @@ export const IconBroadcastingLive = () => (
     height="16"
     viewBox="0 0 44 44"
     xmlns="http://www.w3.org/2000/svg"
-    stroke="#484848"
-  >
+    stroke="#484848">
     <g fill="red" strokeWidth="0">
       <circle cx="22" cy="22" r="1">
         <animate

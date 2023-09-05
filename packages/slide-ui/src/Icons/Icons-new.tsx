@@ -49,6 +49,7 @@ const DEFAULT_SIZE = 24;
 
 export type IconProps = {
   size?: number;
+  // eslint-disable-next-line react/no-unused-prop-types
   rotation?: string;
 };
 
