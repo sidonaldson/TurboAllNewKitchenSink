@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from "react";
-import { IconProps } from "../";
+import { themes, ButtonThemes } from "./Button.themes";
+import { IconProps } from "..";
 import Styles from "./Button.module.scss";
 
 // have to extend CSSProperties to allow CSS variables
@@ -9,8 +10,6 @@ declare module "react" {
     [key: `--${string}`]: string | number;
   }
 }
-
-import { themes, ButtonThemes } from "./Button.themes";
 
 export type ButtonProps = {
   theme?: ButtonThemes;
@@ -82,8 +81,7 @@ export const Button = React.memo(
           <div
             className={Styles.text}
             data-text-align={textAlign}
-            style={textStyleProps}
-          >
+            style={textStyleProps}>
             {text}
           </div>
         );
@@ -104,13 +102,14 @@ export const Button = React.memo(
             <div
               className={Styles.text}
               data-text-align={textAlign}
-              style={textStyleProps}
-            >
+              style={textStyleProps}>
               {activeText}
             </div>
           </>
         );
       }
+
+      return null;
     };
 
     return (
@@ -125,8 +124,7 @@ export const Button = React.memo(
         data-position={position}
         data-icon-side={iconPosition}
         disabled={disabled}
-        onClick={onClick}
-      >
+        onClick={onClick}>
         {renderContent()}
       </button>
     );
