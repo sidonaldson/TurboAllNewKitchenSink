@@ -1,37 +1,41 @@
+/* eslint-disable react/prop-types */
+// @ts-nocheck
 import React from "react";
 import { Button } from "../Button";
 import { IconClose } from "../Icons";
 import styles from "./Modal.module.css";
 
-export const Modal = (props) => {
-  if (props.variant === "popover") {
-    return props.children;
-  }
+export const Modal = ({
+  variant,
+  children,
+  hasUiControl,
+  title,
+  handleClose,
+}) => {
+  if (variant === "popover") return children;
 
-  const variant_container = `container--${props.variant}`;
-  const variant_window = `window--${props.variant}`;
+  const variantContainer = `container--${variant}`;
+  const variantWindow = `window--${variant}`;
   return (
     <div
-      className={`${styles.container} ${styles[variant_container] ?? ""}`}
-      data-cy="modal-container"
-    >
+      className={`${styles.container} ${styles[variantContainer] ?? ""}`}
+      data-cy="modal-container">
       <div
-        className={` ${styles.window} ${styles[variant_window] ?? ""}`}
-        data-cy="modal-window"
-      >
-        {props.title && (
+        className={` ${styles.window} ${styles[variantWindow] ?? ""}`}
+        data-cy="modal-window">
+        {title && (
           <div key="title" className={styles.title} data-cy="modal-title">
-            {props.title}
+            {title}
           </div>
         )}
-        {props.children}
-        {props.handleClose && props.hasUiControl && (
+        {children}
+        {handleClose && hasUiControl && (
           <Button
             key="close-button"
             position="top-right"
             icon={IconClose}
-            onClick={props.handleClose}
-            theme={props.variant === "ui" ? "translucent" : "black"}
+            onClick={handleClose}
+            theme={variant === "ui" ? "translucent" : "black"}
           />
         )}
       </div>

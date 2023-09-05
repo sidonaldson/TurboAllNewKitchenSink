@@ -19,12 +19,12 @@ export const Modal = ({
 }: ModelProps) => {
   if (variant === "popover") return children;
 
-  const variant_container = `container--${variant}`;
-  const variant_window = `window--${variant}`;
+  const variantContainer = `container--${variant}`;
+  const variantWindow = `window--${variant}`;
 
   return (
-    <div className={`${Styles.container} ${Styles[variant_container] ?? ""}`}>
-      <div className={` ${Styles.window} ${Styles[variant_window] ?? ""}`}>
+    <div className={`${Styles.container} ${Styles[variantContainer] ?? ""}`}>
+      <div className={` ${Styles.window} ${Styles[variantWindow] ?? ""}`}>
         {title.length > 0 && <div className={Styles.title}>{title}</div>}
         {children}
         {handleClose && hasUiControl && (
