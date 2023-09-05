@@ -14,8 +14,7 @@ export function ImagePage() {
           maxWidth: 1024,
           overflow: "hidden",
           marginBottom: 40,
-        }}
-      >
+        }}>
         <Image
           source="https://picsum.photos/1600/900"
           fit="cover"
@@ -30,8 +29,7 @@ export function ImagePage() {
           maxWidth: 1024,
           overflow: "hidden",
           marginBottom: 40,
-        }}
-      >
+        }}>
         <Image
           source="https://picsum.photos/900/1600"
           fit="contain"

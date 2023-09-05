@@ -16,8 +16,7 @@ export const Hawkeye = React.memo(
       ${Styles.hawkeye}
       ${Styles[corner]}
       ${visible ? Styles.isVisible : ""} 
-    `}
-    >
+    `}>
       <img src={image} alt="" />
       <menu>
         <Button className={Styles["button-top-left"]} icon={IconArrowUpward} />

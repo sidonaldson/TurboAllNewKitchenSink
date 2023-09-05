@@ -31,8 +31,7 @@ export const SpeakerNotes = ({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className={Styles.speaker_notes_container}
-          >
+            className={Styles.speaker_notes_container}>
             {title.length > 0 && <h3 className={Styles.title}>{title}</h3>}
             <div
               className={Styles.body}
@@ -49,8 +48,7 @@ export const SpeakerNotes = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
+              transition={{ duration: 0.3 }}>
               <Button
                 icon={IconSpeakerNotesOn}
                 iconToggled={IconSpeakerNotesOff}

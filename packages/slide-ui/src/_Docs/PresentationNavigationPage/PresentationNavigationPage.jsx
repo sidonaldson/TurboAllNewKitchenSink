@@ -16,8 +16,7 @@ export function PresentationNavigationPage() {
           overflow: "scroll",
           background: "rgb(33, 33, 33)",
           marginBottom: 40,
-        }}
-      >
+        }}>
         <PresentationNavigation
           story={{ columnGroups, sequences }}
           storyState={storyState}

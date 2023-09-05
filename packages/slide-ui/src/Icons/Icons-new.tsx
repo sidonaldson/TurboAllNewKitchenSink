@@ -152,8 +152,7 @@ export const IconCone = ({ size = DEFAULT_SIZE, rotation }: IconProps) => (
     width="24"
     height="24"
     style={{ transform: `rotate(${rotation})` }}
-    viewBox="0 0 269.5 339.1"
-  >
+    viewBox="0 0 269.5 339.1">
     <g>
       <g>
         <path
@@ -230,8 +229,7 @@ export const IconBroadcastingLive = () => (
     height="16"
     viewBox="0 0 44 44"
     xmlns="http://www.w3.org/2000/svg"
-    stroke="#484848"
-  >
+    stroke="#484848">
     <g fill="red" strokeWidth="0">
       <circle cx="22" cy="22" r="1">
         <animate

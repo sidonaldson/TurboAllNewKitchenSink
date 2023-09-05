@@ -13,8 +13,7 @@ export function IconsPage() {
           display: "grid",
           gap: 1,
           gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))",
-        }}
-      >
+        }}>
         {Object.keys(Icons).map((icon) => (
           <div key={icon}>
             <div
@@ -26,8 +25,7 @@ export function IconsPage() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-              }}
-            >
+              }}>
               {Icons[icon]({ size: 24 })}
               <p style={{ paddingTop: 20, fontSize: 12 }}>{icon}</p>
             </div>
