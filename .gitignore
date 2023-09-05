@@ -21,7 +21,7 @@ dist
 dist-ssr
 storybook-static/
 .cache
-
+.parcel-cache
 
 # debug
 npm-debug.log*
