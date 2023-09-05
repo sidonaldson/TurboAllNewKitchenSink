@@ -1,1 +1,1 @@
-export * from "./Pager.jsx";
+export * from "./Pager";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useCallback, useMemo } from "react";
 import PropTypes from "prop-types";
 import { Button } from "../Button";
@@ -45,8 +46,7 @@ export const Pager = ({
         <div
           key="x-of-y"
           className={styles.progress_xy}
-          data-cy="pager-progress"
-        >
+          data-cy="pager-progress">
           {active + 1} of {items.length}
         </div>,
         <Button
@@ -66,7 +66,7 @@ export const Pager = ({
           textAlign="center"
           textToggled={item.buttonText}
           isToggled={active === i}
-          key={`button-${i}`}
+          key={item.buttonText}
           onClick={() => setActive(i)}
           className={!hasUiControl ? styles.button_passive : null}
         />
@@ -82,13 +82,13 @@ export const Pager = ({
         "--items-length": items.length,
         "--separator-before-size": inModal ? "0" : "1px",
         "--offset-top":
+          // eslint-disable-next-line no-nested-ternary
           format === "tabs-left" && hasUiControl && inModal === false
             ? screenshareActive
               ? "120px"
               : "60px"
             : "0px",
-      }}
-    >
+      }}>
       {format === "arrows" && renderArrows}
       {format === "buttons-left" && renderTextButtons}
       {format === "tabs-left" && renderTextButtons}
@@ -100,6 +100,7 @@ export const Pager = ({
 export const formats = ["arrows", "buttons-left", "tabs-left", "tabs-bottom"];
 
 Pager.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   items: PropTypes.array.isRequired,
   active: PropTypes.number.isRequired,
   setActive: PropTypes.func.isRequired,

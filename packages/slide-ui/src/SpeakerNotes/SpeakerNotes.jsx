@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,7 +10,7 @@ import styles from "./SpeakerNotes.module.scss";
 export const SpeakerNotes = ({ title, body, isCurrent, position }) => {
   const [isToggled, setIsToggled] = useState(false);
   return (
-    <Fragment>
+    <>
       <AnimatePresence>
         {isToggled && (
           <motion.div
@@ -18,8 +19,7 @@ export const SpeakerNotes = ({ title, body, isCurrent, position }) => {
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
             className={styles.speaker_notes_container}
-            data-cy="speaker-notes-container"
-          >
+            data-cy="speaker-notes-container">
             {title && <h3 className={styles.title}>{title}</h3>}
             <div
               className={styles.body}
@@ -36,8 +36,7 @@ export const SpeakerNotes = ({ title, body, isCurrent, position }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
+              transition={{ duration: 0.3 }}>
               <Button
                 icon={IconSpeakerNotesOn}
                 iconToggled={IconSpeakerNotesOff}
@@ -48,7 +47,7 @@ export const SpeakerNotes = ({ title, body, isCurrent, position }) => {
           )}
         </AnimatePresence>
       </Portal>
-    </Fragment>
+    </>
   );
 };
 
