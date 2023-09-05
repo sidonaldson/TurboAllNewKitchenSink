@@ -26,12 +26,17 @@ export const Switch = React.memo(
             ? Styles.switch__active_left
             : Styles.switch__active_right
         }
-    `}
-    >
-      <button className={Styles.switch_button} onClick={actionLeft}>
+    `}>
+      <button
+        className={Styles.switch_button}
+        onClick={actionLeft}
+        type="button">
         {textLeft}
       </button>
-      <button className={Styles.switch_button} onClick={actionRight}>
+      <button
+        className={Styles.switch_button}
+        onClick={actionRight}
+        type="button">
         {textRight}
       </button>
     </div>
