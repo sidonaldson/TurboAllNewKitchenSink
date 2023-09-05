@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+// @ts-nocheck
 import React, { useRef, useEffect } from "react";
 import styles from "./PresentationNavigation.module.scss";
 
@@ -32,74 +34,71 @@ export function PresentationNavigation({
     <ol
       className={styles.story}
       data-sequences-count={story.sequences?.length ?? 0}
-      data-cy="presentation-naviation-story"
-    >
-      {story.columnGroups.map((columnGroup, i) => {
-        return (
-          <li
-            className={styles.column_group}
-            key={`column-group_${i}`}
-            data-cy="presentation-naviation-column-group"
-          >
-            <div className={styles.column_group__title}>
-              <h2>{columnGroup.title}</h2>
-            </div>
-            <div className={styles.columns}>
-              {columnGroup.columns.map((column, j) => {
-                const columnState = storyState.columns[columnAccumulator];
-                const isActiveColumn =
-                  columnAccumulator === storyState.columnIndex;
-                columnAccumulator++;
-                return (
-                  <ol
-                    className={styles.column}
-                    key={`column_${i}_${j}`}
-                    ref={isActiveColumn ? activeColumnEl : null}
-                    data-cy="presentation-naviation-column"
-                  >
-                    {columnState.slides.map((slide) => {
-                      const { x, y } = slide.position;
-                      const isFirst = y === 0;
-                      const isSelectedSlide =
-                        storyState.columnIndex === x &&
-                        columnState.slideIndex === y;
-                      return (
-                        <li
-                          key={`${x}_${y}`}
-                          data-cy="presentation-naviation-slide"
-                          onClick={() =>
-                            openSlide({
-                              ...slide.position,
-                              presentationId: slide.position.s,
-                              slideId: slide.slideId,
-                            })
-                          }
-                          className={`
+      data-cy="presentation-naviation-story">
+      {story.columnGroups.map((columnGroup, i) => (
+        <li
+          className={styles.column_group}
+          key={columnGroup.title}
+          data-cy="presentation-naviation-column-group">
+          <div className={styles.column_group__title}>
+            <h2>{columnGroup.title}</h2>
+          </div>
+          <div className={styles.columns}>
+            {columnGroup.columns.map((column, j) => {
+              const columnState = storyState.columns[columnAccumulator];
+              const isActiveColumn =
+                columnAccumulator === storyState.columnIndex;
+              // eslint-disable-next-line no-plusplus
+              columnAccumulator++;
+              return (
+                <ol
+                  className={styles.column}
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`column_${i}_${j}`}
+                  ref={isActiveColumn ? activeColumnEl : null}
+                  data-cy="presentation-naviation-column">
+                  {columnState.slides.map((slide) => {
+                    const { x, y } = slide.position;
+                    const isFirst = y === 0;
+                    const isSelectedSlide =
+                      storyState.columnIndex === x &&
+                      columnState.slideIndex === y;
+                    return (
+                      // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+                      <li
+                        key={`${x}_${y}`}
+                        data-cy="presentation-naviation-slide"
+                        onClick={() =>
+                          openSlide({
+                            ...slide.position,
+                            presentationId: slide.position.s,
+                            slideId: slide.slideId,
+                          })
+                        }
+                        className={`
                             ${styles.slide}
                             ${
                               isSelectedSlide ? styles["is-selected-slide"] : ""
                             }
                             ${isFirst ? styles["is-first"] : ""}
-                          `}
-                        >
-                          {isFirst && (
-                            <div className={styles.slide_thumbnail}>
-                              {column.thumbnail && (
-                                <img src={column.thumbnail} alt="" />
-                              )}
-                            </div>
-                          )}
-                          <p className={styles.slide_title}>{slide.title}</p>
-                        </li>
-                      );
-                    })}
-                  </ol>
-                );
-              })}
-            </div>
-          </li>
-        );
-      })}
+                          `}>
+                        {isFirst && (
+                          <div className={styles.slide_thumbnail}>
+                            {column.thumbnail && (
+                              <img src={column.thumbnail} alt="" />
+                            )}
+                          </div>
+                        )}
+                        <p className={styles.slide_title}>{slide.title}</p>
+                      </li>
+                    );
+                  })}
+                </ol>
+              );
+            })}
+          </div>
+        </li>
+      ))}
       <li>&nbsp;</li>
     </ol>
   );
