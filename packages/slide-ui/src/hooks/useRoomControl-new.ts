@@ -16,7 +16,9 @@ export const useRoomControl = ({
     if (role === "listen") return;
     try {
       if (!string.length)
-        new Error("[RoomControl] sendCommand aborted due to missing `string`");
+        throw Error(
+          "[RoomControl] sendCommand aborted due to missing `string`"
+        );
 
       console.info(
         `[RoomControl] sending "${string}" (${roomControlConfig?.apiUrl}/?command=${string})`
