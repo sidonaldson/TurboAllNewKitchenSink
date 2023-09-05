@@ -1,1 +1,1 @@
-export * from "./SpeakerNotes.jsx";
+export * from "./SpeakerNotes";
