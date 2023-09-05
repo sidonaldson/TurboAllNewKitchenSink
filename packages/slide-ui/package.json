@@ -2,11 +2,14 @@
   "name": "@showhereco/slide-ui",
   "description": "",
   "version": "0.3.0",
+  "private": false,
+  "license": "MIT",
+  "sideEffects": false,
+  "author": "Tom van de Velde <tom.vandevelde@showhere.co>",
   "repository": "git://github.com/showhereco/slide-ui.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "author": "Tom van de Velde <tom.vandevelde@showhere.co>",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
@@ -21,14 +24,6 @@
     "formatting": "prettier --write **/*.{js,jsx,ts,tsx,json,yml,md} src/**/*.{js,ts,jsx,tsx,json,css,yml,md}",
     "formatting:check": "prettier --check **/*.{js,jsx,ts,tsx,json,yml,md} src/**/*.{js,ts,jsx,tsx,json,css,yml,md}"
   },
-  "peerDependencies": {
-    "@styled-icons/boxicons-regular": "^10.46.0",
-    "@styled-icons/material": "^10.46.0",
-    "framer-motion": "^7.6.5",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.22.15",
     "@babel/plugin-transform-react-jsx": "^7.22.15",
@@ -37,12 +32,16 @@
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-typescript": "^11.1.3",
+    "@styled-icons/boxicons-regular": "^10.47.0",
+    "@styled-icons/material": "^10.47.0",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "babel-loader": "^9.1.3",
     "eslint": "^8.35.0",
     "eslint-config-custom": "workspace:*",
+    "framer-motion": "^10.16.4",
     "prettier": "^3.0.3",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
