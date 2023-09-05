@@ -1,19 +1,19 @@
+// @ts-nocheck
 import React from "react";
 import PropTypes from "prop-types";
 import { Button } from "../Button";
 import { IconArrowUpward } from "../Icons";
 import styles from "./Hawkeye.module.scss";
 
-export const Hawkeye = (props) => (
+export const Hawkeye = ({ corner, visible, image }) => (
   <div
     className={`
       ${styles.hawkeye}
-      ${styles[props.corner]}
-      ${props.visible ? styles.isVisible : ""} 
+      ${styles[corner]}
+      ${visible ? styles.isVisible : ""} 
     `}
-    data-cy="hawkeye"
-  >
-    <img src={props.image} alt="" data-cy="hawkeye-image" />
+    data-cy="hawkeye">
+    <img src={image} alt="" data-cy="hawkeye-image" />
     <menu data-cy="hawkeye-menu">
       <Button
         className={styles["button-top-left"]}
