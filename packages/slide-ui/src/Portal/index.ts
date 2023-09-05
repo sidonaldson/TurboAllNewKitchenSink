@@ -1,1 +1,2 @@
-export * from "./Portal";
+// eslint-disable-next-line import/extensions
+export * from "./Portal.jsx";

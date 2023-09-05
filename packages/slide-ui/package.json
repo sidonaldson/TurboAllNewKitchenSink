@@ -24,10 +24,14 @@
     "formatting": "prettier --write **/*.{js,jsx,ts,tsx,json,yml,md} src/**/*.{js,ts,jsx,tsx,json,css,yml,md}",
     "formatting:check": "prettier --check **/*.{js,jsx,ts,tsx,json,yml,md} src/**/*.{js,ts,jsx,tsx,json,css,yml,md}"
   },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.15",
     "@babel/plugin-transform-react-jsx": "^7.22.15",
     "@babel/plugin-transform-runtime": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
@@ -50,6 +54,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.66.1",
+    "styled-components": "^6.0.7",
     "tsconfig": "workspace:*",
     "tslib": "^2.6.2",
     "typescript": "^4.9.5",

@@ -27,9 +27,12 @@ export default [
       resolve(),
       commonjs({
         include: "node_modules/**",
+        requireReturnsDefault: "auto",
       }),
       babel({
         babelHelpers: "runtime",
+        exclude: "node_modules/**",
+        presets: ["@babel/preset-react"],
         plugins: [
           "@babel/plugin-transform-react-jsx",
           "@babel/plugin-transform-runtime",

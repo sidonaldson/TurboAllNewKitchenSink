@@ -1,1 +1,2 @@
-export * from "./Hawkeye";
+// eslint-disable-next-line import/extensions
+export * from "./Hawkeye.jsx";
