@@ -1,1 +1,1 @@
-export * from "./TitleBar.jsx";
+export * from "./TitleBar";
