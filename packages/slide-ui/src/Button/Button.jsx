@@ -1,9 +1,13 @@
+// @ts-nocheck
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Button.module.scss";
+import { themes } from "./themes";
 
 export const Button = ({
+  // eslint-disable-next-line react/prop-types
   className,
+  // eslint-disable-next-line react/prop-types
   disabled,
   icon,
   iconContainerSize,
@@ -46,41 +50,43 @@ export const Button = ({
         <div
           className={styles.text}
           data-text-align={textAlign}
-          style={styleProps.text}
-        >
+          style={styleProps.text}>
           {text}
         </div>
       );
-    } else if (!activeText && activeIcon) {
+    }
+
+    if (!activeText && activeIcon) {
       return (
         <div
           className={styles.icon}
           style={styleProps.icon}
-          data-cy="button-icon"
-        >
+          data-cy="button-icon">
           {React.createElement(activeIcon, { size: iconSize })}
         </div>
       );
-    } else if (activeText && activeIcon) {
+    }
+
+    if (activeText && activeIcon) {
       return (
         <>
           <div
             className={styles.icon}
             style={styleProps.icon}
-            data-cy="button-icon"
-          >
+            data-cy="button-icon">
             {React.createElement(activeIcon, { size: iconSize })}
           </div>
           <div
             className={styles.text}
             data-text-align={textAlign}
-            style={styleProps.text}
-          >
+            style={styleProps.text}>
             {activeText}
           </div>
         </>
       );
     }
+
+    return null;
   };
 
   return (
@@ -95,120 +101,10 @@ export const Button = ({
       data-position={position}
       data-icon-side={iconPosition}
       disabled={disabled}
-      onClick={onClick}
-    >
+      onClick={onClick}>
       {renderContent()}
     </button>
   );
-};
-
-export const themes = {
-  translucent: {
-    text: {
-      backgroundColor: "rgba(50, 50, 50, 0.6)",
-      color: "white",
-    },
-    textToggled: {
-      backgroundColor: "rgba(50, 50, 50, 1)",
-      color: "white",
-    },
-    icon: {
-      backgroundColor: "rgba(50, 50, 50, 0.6)",
-      fill: "white",
-    },
-    iconToggled: {
-      backgroundColor: "rgba(50, 50, 50, 1)",
-      fill: "white",
-    },
-  },
-  transparent: {
-    text: {
-      backgroundColor: "transparent",
-      fill: "inherit",
-    },
-    icon: {
-      backgroundColor: "transparent",
-      fill: "inherit",
-    },
-  },
-  "grey-light": {
-    text: {
-      backgroundColor: "#b0b0b0",
-      color: "black",
-    },
-    icon: {
-      backgroundColor: "#b0b0b0",
-      fill: "black",
-    },
-  },
-  "grey-dark": {
-    text: {
-      backgroundColor: "#333",
-      color: "white",
-    },
-    textToggled: {
-      backgroundColor: "#333",
-      color: "white",
-    },
-    icon: {
-      backgroundColor: "#333",
-      fill: "white",
-    },
-    iconToggled: {
-      backgroundColor: "#333",
-      fill: "white",
-    },
-  },
-  black: {
-    text: {
-      backgroundColor: "black",
-      color: "white",
-    },
-    icon: {
-      backgroundColor: "black",
-      fill: "white",
-    },
-  },
-  white: {
-    text: {
-      backgroundColor: "white",
-      color: "black",
-    },
-    icon: {
-      backgroundColor: "white",
-      fill: "black",
-    },
-  },
-  "clear-white": {
-    text: {
-      backgroundColor: "rgba(255,255,255,0.6)",
-      color: "black",
-    },
-    icon: {
-      backgroundColor: "rgba(255,255,255,0.6)",
-      fill: "black",
-    },
-  },
-  green: {
-    text: {
-      backgroundColor: "#00be5a",
-      color: "white",
-    },
-    icon: {
-      backgroundColor: "#00be5a",
-      fill: "white",
-    },
-  },
-  red: {
-    text: {
-      backgroundColor: "#f1545d",
-      color: "white",
-    },
-    icon: {
-      backgroundColor: "#f1545d",
-      fill: "white",
-    },
-  },
 };
 
 Button.defaultProps = {
@@ -250,6 +146,7 @@ Button.propTypes = {
     width: PropTypes.string,
     height: PropTypes.string,
   }),
+  // eslint-disable-next-line react/forbid-prop-types
   style: PropTypes.object,
   text: PropTypes.string,
   textAlign: PropTypes.oneOf(["left", "center", "right"]),
