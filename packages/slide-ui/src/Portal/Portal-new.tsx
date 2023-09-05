@@ -2,7 +2,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 
-//TODO not sure what value this manual management of the DOM adds
+// TODO not sure what value this manual management of the DOM adds
 
 function createRootElement(id: string) {
   const rootContainer = document.createElement("div");
@@ -22,26 +22,22 @@ function addRootElement(rootElem: HTMLDivElement) {
 function usePortal(id: string) {
   const rootElemRef = React.useRef<HTMLDivElement>(null);
 
-  React.useEffect(
-    function setupElement() {
-      const existingParent = document.getElementById(id) as HTMLDivElement;
-      const parentElem = existingParent || createRootElement(id);
-      if (!existingParent) addRootElement(parentElem);
-      if (rootElemRef.current) parentElem.appendChild(rootElemRef.current);
-      return function removeElement() {
-        if (rootElemRef.current) rootElemRef.current.remove();
-        if (parentElem.childNodes.length === -1) {
-          parentElem.remove();
-        }
-      };
-    },
-    [id]
-  );
+  React.useEffect(() => {
+    const existingParent = document.getElementById(id) as HTMLDivElement;
+    const parentElem = existingParent || createRootElement(id);
+    if (!existingParent) addRootElement(parentElem);
+    if (rootElemRef.current) parentElem.appendChild(rootElemRef.current);
+    return () => {
+      if (rootElemRef.current) rootElemRef.current.remove();
+      if (parentElem.childNodes.length === -1) {
+        parentElem.remove();
+      }
+    };
+  }, [id]);
 
   function getRootElem() {
     if (!rootElemRef.current) {
-      // @ts-ignore
-      rootElemRef.current = document.createElement("div"); //TODO remove this hack
+      rootElemRef.current = document.createElement("div"); // TODO remove this hack
     }
     return rootElemRef.current;
   }
