@@ -1,0 +1,87 @@
+.menu {
+  all: unset;
+  position: absolute;
+}
+
+.menu--arrows {
+  bottom: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: stretch;
+}
+
+.progress_xy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  margin: 0 1px;
+  background-color: rgba(50, 50, 50, 0.6);
+  color: white;
+}
+
+.menu--buttons-left {
+  min-width: 60px;
+  max-width: 180px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu--buttons-left > button {
+  width: 100%;
+  margin-bottom: 1px;
+}
+.menu--buttons-left > button:last-child {
+  margin-bottom: 0;
+}
+.menu--buttons-left > button > span {
+  justify-content: center;
+}
+
+.menu--tabs-left {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: var(--separator-before-size);
+  width: 60px;
+  height: auto;
+  top: var(--offset-top);
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.menu--tabs-left button {
+  margin-bottom: 1px;
+  height: auto;
+  flex: 1;
+}
+.menu--tabs-left button:last-child {
+  margin-bottom: 0;
+}
+.menu--tabs-left button > span {
+  height: 100%;
+}
+
+.menu--tabs-bottom {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 1px;
+}
+.menu--tabs-bottom {
+  grid-template-columns: repeat(var(--items-length), 1fr);
+}
+
+.menu--tabs-bottom > button {
+  width: 100%;
+}
+.menu--tabs-bottom > button > span {
+  justify-content: center;
+}
+
+.button_passive {
+  pointer-events: none;
+}

@@ -1,0 +1,80 @@
+.button {
+  all: unset;
+  width: var(--button-width);
+  height: var(--button-height);
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  user-select: none;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  &[data-position="center"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  &[data-position="top-left"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  &[data-position="top-right"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  &[data-icon-side="left"],
+  &[data-icon-side="right"] {
+    gap: 1px;
+  }
+  &[data-icon-side="left"] {
+    flex-direction: row;
+  }
+  &[data-icon-side="right"] {
+    flex-direction: row-reverse;
+  }
+}
+
+.text {
+  flex: 1;
+  background-color: var(--text-background-color);
+  color: var(--text-color);
+  padding: 0 15px;
+  white-space: pre-line;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  &[data-text-align="left"] {
+    justify-content: flex-start;
+  }
+  &[data-text-align="center"] {
+    justify-content: center;
+  }
+  &[data-text-align="right"] {
+    justify-content: flex-end;
+  }
+}
+
+.icon {
+  width: var(--icon-container-width);
+  height: var(--icon-container-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--icon-background-color);
+  svg {
+    fill: var(--icon-fill);
+    transition: transform 0.1s ease;
+  }
+}
