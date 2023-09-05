@@ -1,1 +1,1 @@
-export * from "./IconsPage.jsx";
+export * from "./IconsPage";

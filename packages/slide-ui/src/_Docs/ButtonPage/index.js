@@ -1,1 +1,1 @@
-export * from "./ButtonPage.jsx";
+export * from "./ButtonPage";

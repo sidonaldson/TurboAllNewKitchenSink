@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from "react";
 import { Button, themes, IconGrid, IconGridOff } from "../..";
 
@@ -14,8 +15,7 @@ export function ButtonPage() {
           display: "grid",
           gap: 20,
           gridTemplateColumns: "repeat(3, 1fr)",
-        }}
-      >
+        }}>
         {Object.keys(themes).map((theme) => (
           <div key={theme}>
             <div
@@ -29,8 +29,7 @@ export function ButtonPage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              }}
-            >
+              }}>
               <Button
                 text="Lorem ipsum"
                 textAlign="center"
@@ -50,8 +49,7 @@ export function ButtonPage() {
           display: "grid",
           gap: 20,
           gridTemplateColumns: "repeat(3, 1fr)",
-        }}
-      >
+        }}>
         <Button
           text="Left"
           textAlign="left"
@@ -79,8 +77,7 @@ export function ButtonPage() {
           minHeight: 60,
           minWidth: 562,
           backgroundColor: "black",
-        }}
-      >
+        }}>
         <Button
           position="top-left"
           text="Left"

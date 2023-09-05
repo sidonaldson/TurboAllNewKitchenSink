@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+// @ts-nocheck
 import React, { useState } from "react";
 import { Pager, formats } from "../..";
 
@@ -21,6 +23,19 @@ const tabsItems = [
   { buttonText: "L" },
 ];
 
+function PagerDemo({ format, items: pagerItems }) {
+  const [active, setActive] = useState(0);
+  return (
+    <Pager
+      format={format}
+      items={pagerItems}
+      active={active}
+      setActive={setActive}
+      inModal
+    />
+  );
+}
+
 export function PagerPage() {
   return (
     <>
@@ -38,8 +53,7 @@ export function PagerPage() {
               maxWidth: 1024,
               background: "linear-gradient(to right, #fc00ff, #00dbde)",
               marginBottom: 40,
-            }}
-          >
+            }}>
             <PagerDemo
               format={format}
               items={format === "tabs-left" ? tabsItems : items}
@@ -48,18 +62,5 @@ export function PagerPage() {
         </div>
       ))}
     </>
-  );
-}
-
-function PagerDemo(props) {
-  const [active, setActive] = useState(0);
-  return (
-    <Pager
-      format={props.format}
-      items={props.items}
-      active={active}
-      setActive={setActive}
-      inModal={true}
-    />
   );
 }

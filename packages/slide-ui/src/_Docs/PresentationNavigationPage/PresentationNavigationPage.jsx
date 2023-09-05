@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import { PresentationNavigation } from "../..";
 import { columnGroups, sequences, initialStoryState } from "./data";
@@ -21,7 +22,7 @@ export function PresentationNavigationPage() {
           story={{ columnGroups, sequences }}
           storyState={storyState}
           menuVisible={false}
-          openSlide={({ s, x, y }) => {
+          openSlide={({ _s, x, y }) => {
             const nextState = { ...storyState };
             nextState.columnIndex = x;
             nextState.columns[x].slideIndex = y;

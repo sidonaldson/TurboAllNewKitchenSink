@@ -1,12 +1,7 @@
+// @ts-nocheck
 import React from "react";
 import { createRoot } from "react-dom/client";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ButtonPage } from "./ButtonPage";
 import { HawkeyePage } from "./HawkeyePage";
 import { IconsPage } from "./IconsPage";
@@ -17,13 +12,27 @@ import { PresentationNavigationPage } from "./PresentationNavigationPage";
 import { SpeakerNotesPage } from "./SpeakerNotesPage";
 import { SwitchPage } from "./SwitchPage";
 import { TitleBarPage } from "./TitleBarPage";
+import { Layout } from "./Layout";
 import "./style.scss";
+
+export const navItems = [
+  "Button",
+  "Hawkeye",
+  "Icons",
+  "Image",
+  "Modal",
+  "Pager",
+  "PresentationNavigation",
+  "SpeakerNotes",
+  "Switch",
+  "TitleBar",
+];
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout navItems={navItems} />}>
           <Route index element={null} />
           <Route path="Button" element={<ButtonPage />} />
           <Route path="Hawkeye" element={<HawkeyePage />} />
@@ -42,44 +51,6 @@ function App() {
         </Route>
       </Routes>
     </Router>
-  );
-}
-
-const navItems = [
-  "Button",
-  "Hawkeye",
-  "Icons",
-  "Image",
-  "Modal",
-  "Pager",
-  "PresentationNavigation",
-  "SpeakerNotes",
-  "Switch",
-  "TitleBar",
-];
-function Layout() {
-  return (
-    <>
-      <header>
-        <h1>
-          <a href="/">ui docs</a>
-        </h1>
-      </header>
-
-      <nav>
-        <ul>
-          {navItems.map((item) => (
-            <li key={item}>
-              <Link to={item}>{item}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <main>
-        <Outlet />
-      </main>
-    </>
   );
 }
 

@@ -1,1 +1,1 @@
-export * from "./PresentationNavigationPage.jsx";
+export * from "./PresentationNavigationPage";

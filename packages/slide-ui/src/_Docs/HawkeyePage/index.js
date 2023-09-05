@@ -1,1 +1,1 @@
-export * from "./HawkeyePage.jsx";
+export * from "./HawkeyePage";

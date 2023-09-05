@@ -17,13 +17,8 @@ export function HawkeyePage() {
           overflow: "hidden",
           background: "linear-gradient(to right, #fc00ff, #00dbde)",
           marginBottom: 40,
-        }}
-      >
-        <Hawkeye
-          image="https://picsum.photos/480"
-          visible={true}
-          corner="top-right"
-        />
+        }}>
+        <Hawkeye image="https://picsum.photos/480" visible corner="top-right" />
       </div>
     </>
   );

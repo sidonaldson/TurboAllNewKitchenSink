@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import { SpeakerNotes, TitleBar } from "../..";
 
@@ -32,13 +33,12 @@ export function SpeakerNotesPage() {
           overflow: "hidden",
           background: "linear-gradient(to right, #fc00ff, #00dbde)",
           marginBottom: 40,
-        }}
-      >
+        }}>
         <TitleBar text="👉 👀 👉" />
         <SpeakerNotes
           title="Optional title"
           body={content}
-          isCurrent={true}
+          isCurrent
           position={slidePosition}
         />
         <div
