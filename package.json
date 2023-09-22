@@ -5,6 +5,7 @@
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev --no-cache --parallel --continue",
+    "dev:dashboard": "pnpm run dev --scope='dashboard' --include-dependencies & open http://localhost:3000",
     "format": "prettier --check \"**/*.{js,ts,jsx,tsx,json,css,yml,md}\"",
     "format:fix": "prettier --write \"**/*.{js,ts,jsx,tsx,json,css,yml,md}\"",
     "lint": "turbo run lint",

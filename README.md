@@ -10,6 +10,8 @@
 - [ ] - Add React Testing Library
 - [ ] - Add pre-commit and pre-push hooks
 
+Note: `─> pnpm add package-name --filter=slide-ui --save-dev`
+
 # Turborepo kitchen sink starter
 
 This is an official starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.

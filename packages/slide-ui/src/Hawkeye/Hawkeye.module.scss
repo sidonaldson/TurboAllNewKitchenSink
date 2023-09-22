@@ -1,0 +1,75 @@
+.hawkeye {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.6s ease, opacity 0.3s ease;
+  transform-origin: 0 0;
+  @media (min-width: 1920px) and (min-height: 1080px) {
+    width: 330px;
+    height: 330px;
+  }
+
+  &.isVisible {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &.top-left {
+    transform: translate3d(30px, 90px, 0);
+  }
+
+  &.top-right {
+    transform: translate3d(calc(100vw - 230px), 90px, 0);
+    @media (min-width: 1920px) and (min-height: 1080px) {
+      transform: translate3d(calc(100vw - 360px), 90px, 0);
+    }
+  }
+
+  &.bottom-left {
+    transform: translate3d(30px, calc(100vh - 290px), 0);
+  }
+
+  &.bottom-right {
+    transform: translate3d(calc(100vw - 230px), calc(100vh - 290px), 0);
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+
+  menu {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(2, 60px);
+    grid-template-rows: repeat(2, 60px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  // &:hover menu {
+  //   opacity: 1;
+  //   pointer-events: all;
+  // }
+  .button-top-left svg {
+    transform: rotate(-45deg);
+  }
+  .button-top-right svg {
+    transform: rotate(45deg);
+  }
+  .button-bottom-left svg {
+    transform: rotate(-135deg);
+  }
+  .button-bottom-right svg {
+    transform: rotate(135deg);
+  }
+}

@@ -1,0 +1,60 @@
+.speaker_notes_container {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  bottom: 0;
+  color: white;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 40%;
+}
+
+.title {
+  margin: 0 0 20px 0;
+  font-size: 22px;
+}
+
+.body {
+  font-size: 18px;
+  line-height: 24px;
+
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0em;
+    margin-left: 1.5em;
+  }
+
+  ol,
+  ul,
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  ul li {
+    position: relative;
+    &::before {
+      content: "— ";
+      left: -1.5em;
+      position: absolute;
+    }
+  }
+
+  ol li {
+    list-style: decimal;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
