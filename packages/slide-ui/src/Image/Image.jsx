@@ -10,7 +10,6 @@ export const Image = ({
   source,
   sourceWidescreen,
   style,
-  loadedVariant = "visible",
 }) => (
   <picture
     className={`${styles.picture} ${className}`}
@@ -26,9 +25,7 @@ export const Image = ({
       alt=""
       draggable="false"
       data-cy="image"
-      onLoad={({ target }) =>
-        target.setAttribute("data-loaded", `loaded-${loadedVariant}`)
-      }
+      onLoad={({ target }) => target.setAttribute("data-is-ready", true)}
     />
     {caption && (
       <div data-cy="image-caption" className={styles.caption}>
