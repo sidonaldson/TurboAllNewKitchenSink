@@ -19,7 +19,8 @@ export const Modal = ({
   return (
     <div
       className={`${styles.container} ${styles[variantContainer] ?? ""}`}
-      data-cy="modal-container">
+      data-cy="modal-container"
+      data-has-modal="true">
       <div
         className={` ${styles.window} ${styles[variantWindow] ?? ""}`}
         data-cy="modal-window">

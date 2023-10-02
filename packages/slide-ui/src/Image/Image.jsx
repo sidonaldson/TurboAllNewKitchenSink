@@ -10,6 +10,7 @@ export const Image = ({
   source,
   sourceWidescreen,
   style,
+  setIsReady = () => false,
 }) => (
   <picture
     className={`${styles.picture} ${className}`}
@@ -25,7 +26,7 @@ export const Image = ({
       alt=""
       draggable="false"
       data-cy="image"
-      onLoad={({ target }) => target.setAttribute("data-is-ready", true)}
+      onLoad={() => setIsReady(true)}
     />
     {caption && (
       <div data-cy="image-caption" className={styles.caption}>
