@@ -2,8 +2,8 @@ name: Update https://install.showhere.co
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - apps/install-desktop-presenter
 
   workflow_dispatch:    
 
