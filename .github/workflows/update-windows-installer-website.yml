@@ -39,6 +39,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_MANAGEMENT_WINDOWS_INSTALLER }}
           aws-region: eu-west-2
 
-      - run: aws s3 sync dist s3://install.showhere.co
+      - run: aws s3 sync ./apps/install-desktop-presenter/dist s3://install.showhere.co
 
       - run: aws cloudfront create-invalidation --distribution-id E3ATCI1EUD5FAY --paths "/*"
