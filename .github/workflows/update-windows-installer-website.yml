@@ -1,0 +1,44 @@
+name: Update https://install.showhere.co
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          registry-url: "https://npm.pkg.github.com"
+          
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.0.0
+
+      - uses: actions/cache@v3
+        with:
+          path: ~/.pnpm
+          key: pnpm-${{ hashFiles('package-lock.json') }}
+          restore-keys: pnpm-
+
+      - run: pnpm i --filter install-desktop-presenter
+
+      - run: pnpm run build --filter install-desktop-presenter
+
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_MANAGEMENT }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_MANAGEMENT }}
+          aws-region: eu-west-2
+
+      - run: aws s3 sync dist s3://install.showhere.co
+
+      - run: aws cloudfront create-invalidation --distribution-id E3ATCI1EUD5FAY --paths "/*"
